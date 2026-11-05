@@ -1,0 +1,241 @@
+{
+  "meta": {
+    "migrations": {
+      "webhookListeners": true,
+      "modelPolicyAllowlist": true,
+      "utilityModelSeparation": true
+    },
+    "lastTouchedVersion": "2026.11.1"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true
+    },
+    "discord": {
+      "enabled": true,
+      "token": "${DISCORD_BOT_TOKEN}",
+      "dmPolicy": "pairing",
+      "groupPolicy": "allowlist"
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-11-05T12:30:23.391Z",
+    "lastRunVersion": "2026.11.1",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "gateway": {
+    "auth": {
+      "mode": "token",
+      "token": "3086e6de9bdf3fa645a76d02cb958d8ae7a35b72edc07c5e"
+    },
+    "mode": "local",
+    "cliAgents": {
+      "enabled": false
+    },
+    "port": 18789,
+    "bind": "loopback",
+    "tailscale": {
+      "mode": "off"
+    },
+    "trustedProxies": [
+      "127.0.0.1"
+    ],
+    "controlUi": {
+      "allowedOrigins": [
+        "http://localhost:3657"
+      ]
+    }
+  },
+  "skills": {
+    "entries": {
+      "1password": {
+        "enabled": false
+      },
+      "blogwatcher": {
+        "enabled": false
+      },
+      "blucli": {
+        "enabled": false
+      },
+      "camsnap": {
+        "enabled": false
+      },
+      "coding-agent": {
+        "enabled": false
+      },
+      "discord": {
+        "enabled": false
+      },
+      "eightctl": {
+        "enabled": false
+      },
+      "gemini": {
+        "enabled": false
+      },
+      "gifgrep": {
+        "enabled": false
+      },
+      "gog": {
+        "enabled": false
+      },
+      "goplaces": {
+        "enabled": false
+      },
+      "himalaya": {
+        "enabled": false
+      },
+      "mcporter": {
+        "enabled": false
+      },
+      "model-usage": {
+        "enabled": false
+      },
+      "nano-pdf": {
+        "enabled": false
+      },
+      "obsidian": {
+        "enabled": false
+      },
+      "openai-whisper": {
+        "enabled": false
+      },
+      "openhue": {
+        "enabled": false
+      },
+      "oracle": {
+        "enabled": false
+      },
+      "ordercli": {
+        "enabled": false
+      },
+      "sag": {
+        "enabled": false
+      },
+      "sherpa-onnx-tts": {
+        "enabled": false
+      },
+      "songsee": {
+        "enabled": false
+      },
+      "sonoscli": {
+        "enabled": false
+      },
+      "spotify-player": {
+        "enabled": false
+      },
+      "summarize": {
+        "enabled": false
+      },
+      "trello": {
+        "enabled": false
+      },
+      "xurl": {
+        "enabled": false
+      }
+    },
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "hooks": {
+    "internal": {
+      "entries": {
+        "bootstrap-extra-files": {
+          "enabled": true,
+          "paths": [
+            "hooks/bootstrap/AGENTS.md"
+          ]
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      },
+      "enabled": true
+    }
+  },
+  "tools": {
+    "sessions": {
+      "visibility": "tree"
+    },
+    "swarm": false,
+    "profile": "full",
+    "exec": {
+      "security": "full",
+      "strictInlineEval": false
+    }
+  },
+  "agents": {
+    "defaults": {
+      "subagents": {
+        "maxSpawnDepth": 1
+      },
+      "workspace": "/home/halim/.alphaclaw/.openclaw/workspace",
+      "model": {
+        "primary": "google/gemini-3.8-flash"
+      },
+      "models": {
+        "google/gemini-4-argon": {},
+        "google/gemini-3.8-flash": {}
+      }
+    },
+    "entries": {
+      "main": {
+        "name": "main",
+        "workspace": "/home/halim/.alphaclaw/.openclaw/workspace",
+        "agentDir": "/home/halim/.alphaclaw/.openclaw/agents/main/agent",
+        "identity": {
+          "name": "main"
+        }
+      }
+    }
+  },
+  "plugins": {
+    "load": {
+      "paths": [
+        "/home/halim/Desktop/node_modules/@chrysb/alphaclaw/lib/plugin/usage-tracker"
+      ]
+    },
+    "entries": {
+      "discord": {
+        "enabled": true
+      },
+      "usage-tracker": {
+        "enabled": true,
+        "hooks": {
+          "allowConversationAccess": true
+        }
+      },
+      "google": {
+        "enabled": true
+      }
+    },
+    "allow": [
+      "discord",
+      "usage-tracker"
+    ]
+  },
+  "auth": {
+    "profiles": {
+      "google:default": {
+        "provider": "google",
+        "mode": "api_key"
+      },
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      },
+      "openai:default": {
+        "provider": "openai",
+        "mode": "api_key"
+      },
+      "openai:cli-default": {
+        "provider": "openai",
+        "mode": "oauth"
+      }
+    }
+  },
+  "commands": {
+    "restart": true
+  }
+}

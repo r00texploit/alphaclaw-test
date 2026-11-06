@@ -27,7 +27,7 @@
   "gateway": {
     "auth": {
       "mode": "token",
-      "token": "3086e6de9bdf3fa645a76d02cb958d8ae7a35b72edc07c5e"
+      "token": "...."
     },
     "mode": "local",
     "cliAgents": {
